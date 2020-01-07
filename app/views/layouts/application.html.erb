@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all'%>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
@@ -15,12 +15,16 @@
       <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
+          1
           <% if user_signed_in? %>
+          2
             <li><%= link_to 'Профиль', current_user %></li>
             <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
           <% else %>
+          3
             <li><%= link_to 'Войти', new_user_session_path %></li>
             <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+          4
           <% end %>
         </ul>
       </div>
@@ -31,7 +35,6 @@
     <div class="row">
       <div class="col-lg-9">
         <%= bootstrap_flash %>
-
         <%= yield %>
       </div>
       <div class="col-lg-3">
