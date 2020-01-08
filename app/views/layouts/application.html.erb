@@ -13,18 +13,14 @@
   <div class="navbar navbar-default navbar-static-top">
     <div class="container">
       <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
-      <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <div class="navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-          1
           <% if user_signed_in? %>
-          2
             <li><%= link_to 'Профиль', current_user %></li>
             <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
           <% else %>
-          3
             <li><%= link_to 'Войти', new_user_session_path %></li>
             <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
-          4
           <% end %>
         </ul>
       </div>
