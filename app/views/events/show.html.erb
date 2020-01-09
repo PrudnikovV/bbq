@@ -20,7 +20,9 @@
               class: 'btn btn-primary' %>
           </div>
           <div class="buffer-top">
-            <%= link_to t("events.destroy"), @event, method: :delete, data: { confirm: t("events.confirm_destroy")}, class: 'btn btn-primary' %>
+            <%= link_to t("events.destroy"), @event, method: :delete, data: { confirm: t("events.confirm_destroy")}, class: 'btn btn-danger' %>
+          </div>
+          <div class="buffer-top">
           </div>
           <% end %>
         </div>
