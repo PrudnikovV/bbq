@@ -5,7 +5,6 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
-
     # Перевод названий аттрибутов моделей
     attributes:
       user:
@@ -48,4 +47,8 @@ ru:
     change: 'Изменить'
     destroy: 'Удалить'
     confirm_destroy: 'Вы точно хотите удалить событие?'
+
+  subscription:
+    errors:
+      email_exist: 'Cуществует у пользователя. Пожалуйста авторизуйтесь.'
   
