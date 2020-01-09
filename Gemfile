@@ -10,6 +10,9 @@ gem 'webpacker', '~> 4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'uglifier' , '>= 1.3.0'
 gem 'devise'
+gem 'devise-i18n'
+gem 'i18n'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
