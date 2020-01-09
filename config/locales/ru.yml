@@ -32,3 +32,8 @@ ru:
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
+
+  events:
+    change: 'Изменить'
+    destroy: 'Удалить'
+    confirm_destroy: 'Вы точно хотите удалить событие?'
