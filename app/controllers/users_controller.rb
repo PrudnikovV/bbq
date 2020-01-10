@@ -3,8 +3,6 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :set_current_user, except: [:show]
 
-  after_create :link_subscriptions
-
   def show
   end
 
@@ -20,11 +18,6 @@ class UsersController < ApplicationController
   end
 
   private
-
-  def link_subscriptions
-    Subscription.where(user_id: nil, user_email: self.email)
-      .update_all(user_id: self.id)
-  end
 
   def set_user
     @user = User.find(params[:id])
