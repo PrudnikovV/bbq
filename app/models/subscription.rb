@@ -27,6 +27,6 @@ class Subscription < ApplicationRecord
 
   private
     def unique_email
-      errors.add(:user_email, I18n.t('subscription.errors.email_exist') ) if User.where(email: user_email).exists?
+      errors.add(:user_email, I18n.t('subscription.errors.email_exist') ) if User.where(email: user_email.downcase).exists?
     end
 end
