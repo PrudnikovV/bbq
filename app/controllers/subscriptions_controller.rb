@@ -28,7 +28,7 @@ class SubscriptionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subscription
-      @subscription = @event.subscription.find(params[:id])
+      @subscription = @event.subscriptions.find(params[:id])
     end
 
     def set_event
