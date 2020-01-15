@@ -5,11 +5,15 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
+      subscription: 'Комменитарий'
+      comment: 'Подписка'
     # Перевод названий аттрибутов моделей
     attributes:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: 'Аватар'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -17,7 +21,14 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-
+      photo:
+        photo: 'Фотография'
+      comment:
+        user_name: 'Ваше имя'
+        body: 'Комментарий'
+      subscription:
+        user_name: 'Ваше имя'
+        user_email: 'Ваш email'
   # Перевод сообщений, которые отправляет контроллер
   controllers:
     events:
@@ -38,6 +49,10 @@ ru:
       error: 'Подписка/отписка не сработала'
       subscription:
         destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
   # Перевод названия приложения и компании-разработчика
   app:
     name: 'Шашлыки'

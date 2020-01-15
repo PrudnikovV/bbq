@@ -13,6 +13,8 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'i18n'
 gem 'rails-i18n'
+gem 'carrierwave'
+gem 'rmagick'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
