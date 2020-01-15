@@ -67,3 +67,19 @@ ru:
     errors:
       email_exist: 'Cуществует у пользователя. Пожалуйста авторизуйтесь.'
       on_his_event: 'Вы не можете подписаться на собственное событие'          
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
