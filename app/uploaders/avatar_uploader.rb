@@ -11,7 +11,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   if Rails.env.production?
     storage :fog
   else
-    storage :fog
+    storage :file
   end
 
   # Папка, в которой будут храниться все наши загруженные файлы
