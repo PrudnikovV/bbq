@@ -6,7 +6,6 @@ class PhotosController < ApplicationController
   def create
     @new_photo = @event.photos.build(photo_params)
     @new_photo.user = current_user
-    byebug
     if @new_photo.save
       # notify_subscribers_photo(@event, @new_photo)
 
