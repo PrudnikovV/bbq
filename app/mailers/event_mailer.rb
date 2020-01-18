@@ -1,4 +1,3 @@
-require 'open-uri'
 class EventMailer < ApplicationMailer
 
   def subscription(event, subscription)
@@ -20,11 +19,11 @@ class EventMailer < ApplicationMailer
     @event = event
     @email = email
     @photo = photo
-    if Rails.env.production?
-      attachments.inline['photo.jpg'] = open(photo.photo.url)
-    else
-      attachments.inline['photo.jpg'] = File.read(photo.photo.file.file)
-    end
+    # if Rails.env.production?
+    #   attachments.inline['photo.jpg'] = open(photo.photo.url)
+    # else
+    #   attachments.inline['photo.jpg'] = File.read(photo.photo.file.file)
+    # end
     mail to: email, subject: "Новое фото @ #{event.title}"
   end
 end
