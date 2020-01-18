@@ -17,9 +17,8 @@ class EventMailer < ApplicationMailer
 
   def photo(event, photo, email)
     @event = event
-    @photo = photo
     @email = email
-
+    attachments.inline['photo.jpg'] = File.read(photo.photo.url)
     mail to: email, subject: "Новое фото @ #{event.title}"
   end
 end
