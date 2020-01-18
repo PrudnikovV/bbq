@@ -20,7 +20,7 @@ class EventMailer < ApplicationMailer
     @email = email
     @photo = photo
     if Rails.env.production?
-      attachments.inline['photo.jpg'] = File.read(photo.photo.url.to_s)
+      attachments.inline['photo.jpg'] = File.read(photo.photo.file.url)
     else
       attachments.inline['photo.jpg'] = File.read(photo.photo.file.file)
     end
