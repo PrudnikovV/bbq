@@ -75,7 +75,7 @@ ru:
       title: 'Новый комментарий'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата'
       owner: 'Организатор'
     subscription:
       title: 'Новая подписка'
@@ -83,11 +83,11 @@ ru:
       email: 'Email'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата'
       owner: 'Организатор'
     photo:
       title: 'Новое фото'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата'
       owner: 'Организатор'
