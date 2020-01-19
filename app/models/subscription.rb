@@ -22,7 +22,7 @@ class Subscription < ApplicationRecord
     if user.present?
       user.email
     else
-      super
+      super.downcase
     end
   end
 
