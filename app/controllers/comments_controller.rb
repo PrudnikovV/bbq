@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
 
   def notify_subscribers(event, comment)
     all_emails = event.visitors_emails
-    all_emails.delete(current_user.email) if current_user.present?
+    all_emails.delete(comment.user.email) if comment.user.present?
     all_emails.each do |mail|
       EventMailer.comment(event, comment, mail).deliver_now
     end
