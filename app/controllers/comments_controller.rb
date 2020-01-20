@@ -30,9 +30,8 @@ class CommentsController < ApplicationController
   private
 
   def notify_subscribers(event, comment)
-    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
+    all_emails = event.visitors_emails
     all_emails.delete(current_user.email) if current_user.present?
-    byebug
     all_emails.each do |mail|
       EventMailer.comment(event, comment, mail).deliver_now
     end

@@ -14,6 +14,10 @@ class Event < ApplicationRecord
     (subscribers + [user]).uniq
   end
 
+  def visitors_emails
+      (subscriptions.map(&:user_email) + [user.email]).uniq
+  end
+
   def pincode_valid?(pin2chek)
     pincode == pin2chek
   end
