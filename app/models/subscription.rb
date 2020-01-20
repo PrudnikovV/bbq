@@ -10,6 +10,9 @@ class Subscription < ApplicationRecord
   validate :unique_email, unless: -> { user.present? }
   validate :user_on_event, if: -> { user.present? }
 
+  before_validation :email_downcase, on: :create
+
+
   def user_name
     if user.present?
       user.name
@@ -22,13 +25,18 @@ class Subscription < ApplicationRecord
     if user.present?
       user.email
     else
-      super.downcase
+      super
     end
   end
 
   private
+
+    def email_downcase
+      self.user_email.downcase!
+    end
+
     def unique_email
-      errors.add(:user_email, I18n.t('subscription.errors.email_exist') ) if User.where(email: user_email.downcase).exists?
+      errors.add(:user_email, I18n.t('subscription.errors.email_exist') ) if User.where(email: user_email).exists?
     end
 
     def user_on_event

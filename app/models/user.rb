@@ -14,7 +14,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :email, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
 
-  before_validation :set_name, on: :create
+  before_validation :set_name, :email_downcase, on: :create
 
   mount_uploader :avatar, AvatarUploader
 
@@ -25,6 +25,10 @@ class User < ApplicationRecord
   def link_subscriptions
     Subscription.where(user_id: nil, user_email: self.email)
       .update_all(user_id: self.id)
+  end
+
+  def email_downcase
+    self.email.downcase!
   end
 
   def set_name
