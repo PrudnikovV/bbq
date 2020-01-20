@@ -18,7 +18,7 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'jquery-rails'
 gem 'nodejs-rails'
-gem 'bootstrap'
+gem 'bootstrap3-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
