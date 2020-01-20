@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
 gem 'jquery-rails'
+gem 'nodejs-rails'
 gem 'bootstrap'
 
 # Use Redis adapter to run Action Cable in production

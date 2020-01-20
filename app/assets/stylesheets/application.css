@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import "sprockets";
 @import "bootstrap";
 
 .buffer-top {
