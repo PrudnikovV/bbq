@@ -12,7 +12,8 @@
  *
  *= require_tree .
  *= require_self
- *  require bootstrap/scss/bootstrap
+ *= require ekko-lightbox/dist/ekko-lightbox
+ *  bootstrap/scss/bootstrap
  */
 
 .buffer-top {
