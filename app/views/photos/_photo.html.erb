@@ -1,2 +1,2 @@
-  <%= link_to image_tag(photo.photo.thumb.url, class: "img-fluid"), photo.photo.url, data: {toggle: "lightbox", gallery: "example-gallery", type: "image", title: "Добавил #{render partial: 'users/user', object: photo.user}"} %>
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {toggle: "lightbox", gallery: "gallery", type: "image", title: "Добавил #{render partial: 'users/user', object: photo.user}"} %>
 
