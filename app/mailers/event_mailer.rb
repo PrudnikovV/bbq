@@ -19,7 +19,6 @@ class EventMailer < ApplicationMailer
     @event = event
     @email = email
     @photo = photo
-    @url   = event_url(event.id)
     mail to: email, subject: "Новое фото @ #{event.title}"
   end
 end

@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script language="javascript">
           $(document).on('click', '[data-toggle="lightbox"]', function(event) {
@@ -38,7 +40,40 @@
                 $(this).ekkoLightbox();
           });
     </script>
+   <!--<script language="javascript">
+    ymaps.ready(init);
+    var myMap;
 
+    function init(){
+      address = document.getElementById('map').getAttribute('data-address');
+
+      myMap = new ymaps.Map("map", {
+          center: [55.76, 37.64],
+          zoom: 10
+      });
+
+      myGeocoder = ymaps.geocode(address);
+
+      myGeocoder.then(
+        function (res) {
+          coordinates = res.geoObjects.get(0).geometry.getCoordinates();
+
+          myMap.geoObjects.add(
+              new ymaps.Placemark(
+                coordinates,
+                {iconContent: address},
+                {preset: 'islands#blueStretchyIcon'}
+              )
+          );
+
+          myMap.setCenter(coordinates);
+          myMap.setZoom(15);
+        }, function (err) {
+          alert('Ошибка определения местоположения');
+        }
+      );
+    }
+</script>-->
   </head>
 
   <body>
