@@ -11,7 +11,6 @@ class EventMailer < ApplicationMailer
   def comment(event, comment, email)
     @comment = comment
     @event = event
-    @url   = event_url(event.id)
     mail to: email, subject: "Новый комментарий @ #{event.title}"
   end
 
